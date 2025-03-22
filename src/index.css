@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'ChampionsIcons';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/src/fonts/ChampionsIcons.ttf') format('truetype');
+}
+
+.font-icons {
+    font-family: 'ChampionsIcons', sans-serif;
+}
