@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
                     <Route element={<Layout />}>
                         <Route index element={<App />} />
                         <Route path="cards" element={<Cards />} />
-                        <Route path="card/:code" element={<Card />} />
+                        <Route path="cards/:code" element={<Card />} />
                         <Route path="random-hero" element={<RandomHero />} />
                         <Route path="login" element={<Login />} />
                         

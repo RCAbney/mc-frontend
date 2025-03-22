@@ -14,26 +14,26 @@ const Card = () => {
         <div>
             <div className="container mx-auto p-4">
                 <div className="card">
-                    <h1 className="text-xl font-bold">{card[0].is_unique ? <MarvelIcon iconType="u" /> : ""} {card[0].name}</h1>
+                    <h1 className="text-xl font-bold">{card.is_unique ? <MarvelIcon iconType="u" /> : ""} {card.name}</h1>
                     <p>
-                        {card[0].thwart && <span>Thwart: {card[0].thwart}.</span>}&nbsp;
-                        {card[0].attack && <span>Attack: {card[0].attack}.</span>}&nbsp;
-                        {card[0].defense && <span>Defense: {card[0].defense}.</span>}
+                        {card.thwart && <span>Thwart: {card.thwart}.</span>}&nbsp;
+                        {card.attack && <span>Attack: {card.attack}.</span>}&nbsp;
+                        {card.defense && <span>Defense: {card.defense}.</span>}
                     </p>
                     <p>
-                        {card[0].health && <span>Health: {card[0].health}.</span>}&nbsp;
-                        {card[0].hand_size && <span>Hand Size: {card[0].hand_size}.</span>}&nbsp;
+                        {card.health && <span>Health: {card.health}.</span>}&nbsp;
+                        {card.hand_size && <span>Hand Size: {card.hand_size}.</span>}&nbsp;
                     </p>
-                    {card[0].traits && (
+                    {card.traits && (
                         <p>
-                            <TraitTag traits={card[0].traits} />
+                            <TraitTag traits={card.traits} />
                         </p>
                     )}
                     <div className="pl-4 py-3 mt-4 border-l-2">
-                        {parseText(card[0].text)}
+                        {parseText(card.text)}
                     </div>
                     <div className="mt-4">
-                        {card[0].flavor && <p className="italic text-sm">{card[0].flavor}</p>}
+                        {card.flavor && <p className="italic text-sm">{card.flavor}</p>}
                     </div>
                 </div>
             </div>

@@ -5,18 +5,29 @@ export const useFetchCard = (code) => {
     return useQuery({
         queryKey: ["card", code],
         queryFn: async () => {
-            const { data, error } = await supabase
+            // Try player cards first
+            let { data, error } = await supabase
               .from('player_cards')
               .select('*')
-              .eq('code', code);
+              .eq('code', code)
+              .single();
       
-            if (error) {
-              throw new Error(error.message);
+            if (error && error.code === 'PGRST116') { // No rows returned
+                // If not found, try encounter cards
+                ({ data, error } = await supabase
+                    .from('encounter_cards')
+                    .select('*')
+                    .eq('code', code)
+                    .single());
             }
       
-            return data;
-          },
-          refetchOnWindowFocus: false,
-          staleTime: Infinity,
+            if (error && error.code !== 'PGRST116') {
+                throw new Error(error.message);
+            }
+      
+            return data || null;
+        },
+        refetchOnWindowFocus: false,
+        staleTime: Infinity,
     });
 };
