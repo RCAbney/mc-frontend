@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
-import { useFetchCard } from "../queryHooks/fetchCard";
+import { useFetchCard } from "../queryHooks/fetchCard.js";
 import { parseText } from "../utils/textParser.jsx";
-import TraitTag from "../components/TraitTag";
-import MarvelIcon from "../components/MarvelIcon";
+import TraitTag from "./TraitTag.jsx";
+import MarvelIcon from "./MarvelIcon.jsx";
 
 const Card = () => {
     const { code } = useParams();
