@@ -19,12 +19,11 @@ function App() {
         );
     }
 
-    // Get unique hero names
     const uniqueHeroNames = [...new Set(heroes?.map(hero => hero.name) || [])];
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-8">Marvel Champions Heroes</h1>
+            <h1 className="text-3xl font-bold mb-8">Marvel Champions Heroes <span className="font-icons before:content-['I']" /></h1>
             <ul className="space-y-2">
                 {uniqueHeroNames.map((heroName) => (
                     <li key={heroName} className="text-lg">
