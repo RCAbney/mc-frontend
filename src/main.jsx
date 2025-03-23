@@ -11,6 +11,7 @@ import App from "./App.jsx";
 import Cards from "./routes/Cards.jsx";
 import RandomHero from "./routes/RandomHero.jsx";
 import Login from "./routes/Login.jsx";
+import AuthCallback from "./routes/AuthCallback.jsx";
 import MyCollection from "./routes/MyCollection.jsx";
 import MyStats from "./routes/MyStats.jsx";
 import NotFound from "./routes/NotFound.jsx";
@@ -28,6 +29,7 @@ createRoot(document.getElementById("root")).render(
                         <Route path="cards/:code" element={<SpecificCard />} />
                         <Route path="random-hero" element={<RandomHero />} />
                         <Route path="login" element={<Login />} />
+                        <Route path="auth/callback" element={<AuthCallback />} />
                         
                         {/* Protected Routes */}
                         <Route element={<ProtectedRoute />}>

@@ -5,21 +5,17 @@ import ErrorBoundary from "./ErrorBoundary";
 
 export default function Layout() {
   return (
-    <div className="layout">
+    <>
       <header className="flex justify-between items-center p-4">
         <Navbar />
         <Login />
       </header>
       
-      <main>
+      <main className="h-[calc(100vh-theme(spacing.16))]">
         <ErrorBoundary>
           <Outlet />
         </ErrorBoundary>
       </main>
-
-      <footer>
-        {/* Add your footer here later */}
-      </footer>
-    </div>
+    </>
   );
 }
