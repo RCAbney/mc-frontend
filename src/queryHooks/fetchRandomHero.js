@@ -30,7 +30,8 @@ export const useRandomHero = () => {
 
             if (error) throw new Error(error.message);
             return data || null;
-        }
+        },
+        refetchOnWindowFocus: false,
     });
 
     // Function to get a new random hero
