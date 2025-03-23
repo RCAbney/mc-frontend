@@ -24,8 +24,6 @@ const Card = ({ card }) => {
         },
     ];
 
-    console.log(card.traits);
-
     return (
         <div className="p-4">
             <div className="flex flex-col-reverse sm:flex-row gap-4">
