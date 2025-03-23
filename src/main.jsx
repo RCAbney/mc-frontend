@@ -6,7 +6,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "./index.css";
 import "./fonts/ChampionsIcons.ttf";
 import Layout from "./components/Layout.jsx";
-import Card from "./components/Card.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import App from "./App.jsx";
 import Cards from "./routes/Cards.jsx";
@@ -15,7 +14,7 @@ import Login from "./routes/Login.jsx";
 import MyCollection from "./routes/MyCollection.jsx";
 import MyStats from "./routes/MyStats.jsx";
 import NotFound from "./routes/NotFound.jsx";
-
+import SpecificCard from "./routes/SpecificCard.jsx";
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
@@ -26,7 +25,7 @@ createRoot(document.getElementById("root")).render(
                     <Route element={<Layout />}>
                         <Route index element={<App />} />
                         <Route path="cards" element={<Cards />} />
-                        <Route path="cards/:code" element={<Card />} />
+                        <Route path="cards/:code" element={<SpecificCard />} />
                         <Route path="random-hero" element={<RandomHero />} />
                         <Route path="login" element={<Login />} />
                         

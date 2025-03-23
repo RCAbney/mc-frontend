@@ -7,7 +7,7 @@ const TraitTag = ({ traits }) => {
     
     return (
         <span className="italic font-bold">
-            {formattedTraits.join('. ')}
+            {formattedTraits.join('. ')}.
         </span>
     );
 };
