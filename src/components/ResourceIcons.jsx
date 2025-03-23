@@ -6,8 +6,6 @@ const ResourceIcons = ({resourcesArr}) => {
         return acc + resource.count;
     }, 0);
 
-    console.log(totalIcons)
-
     if (totalIcons === 0) return null;
 
     return (

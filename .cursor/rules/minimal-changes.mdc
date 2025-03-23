@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Your rule content
+
+- You can @ files here
+- Only include the minimum necessary changes to implement the requested functionality
+- Preserve all existing styling, structure, and unrelated code
+- Never rewrite or remove existing code unless explicitly requested
+- If unsure about modifying a section, ask the user first
